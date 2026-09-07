@@ -103,6 +103,7 @@ class Person:
         Args:
             target: Optional Person to greet. If provided, the greeting
             will include the target person's name.
+            use_nickname: Whether to use the person's nickname
 
         Raises:
             TypeError: If target is not a Person or None.
