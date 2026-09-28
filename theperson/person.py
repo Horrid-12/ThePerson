@@ -97,10 +97,6 @@ class Person:
         self._memory: str | None = None
 
     def greet(self,
-            target: Person | None = None,
-            use_nickname: bool = False) -> None:
-
-    def greet(self,
               target: Person | None = None,
               use_nickname: bool = False) -> None:
         """Do a simple greeting and introduction.

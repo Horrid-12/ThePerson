@@ -90,7 +90,6 @@ if __name__ == "__main__":
     kdclll.introduce()
     kdclll.say("Hello everyone!")
 
-    lionelmessi =Person(
     lionelmessi = Person(
         profile=Profile(
             name="Lionel Messi",
