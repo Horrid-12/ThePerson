@@ -99,11 +99,16 @@ class Person:
     def greet(self,
             target: Person | None = None,
             use_nickname: bool = False) -> None:
+
+    def greet(self,
+              target: Person | None = None,
+              use_nickname: bool = False) -> None:
         """Do a simple greeting and introduction.
 
         Args:
             target: Optional Person to greet. If provided, the greeting
             will include the target person's name.
+            use_nickname: Whether to use the person's nickname
 
         Raises:
             TypeError: If target is not a Person or None.
