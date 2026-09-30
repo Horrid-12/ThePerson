@@ -576,12 +576,12 @@ class Person:
         self.professional.skills.append(topic)
 
     @staticmethod
-    def flip_coin() -> None:
+    def flip_coin(self) -> None:
         """Flip a coin.
 
         This method flips a coin and prints the result.
         """
 
-        outcomes = ("Heads", "Tails")
+        outcomes = ("heads", "tails")
         result = random.choice(outcomes)
-        print(f"Flipped a coin and it landed on {result}")
+        self.say(f"I flip a coin.  It lands on {result}")
