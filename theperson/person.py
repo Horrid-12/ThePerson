@@ -577,7 +577,10 @@ class Person:
 
     @staticmethod
     def flip_coin() -> None:
-        """Flip a coin and print result"""
+        """Flip a coin.
+
+        This method flips a coin and prints the result.
+        """
 
         outcomes = ("Heads", "Tails")
         result = random.choice(outcomes)
