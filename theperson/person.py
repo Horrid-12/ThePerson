@@ -301,7 +301,7 @@ class Person:
         ]
         
         self.say(random.choice(messages))
-    
+
     def do_tasks(self,
                  tasks: str | list[str],
                  durations: float | list[float]) -> None:
@@ -574,3 +574,11 @@ class Person:
         self.increase_iq(iq_gain)
 
         self.professional.skills.append(topic)
+
+    @staticmethod
+    def flip_coin() -> None:
+        """Flip a coin and print result"""
+
+        outcomes = ("Heads", "Tails")
+        result = random.choice(outcomes)
+        print(f"Flipped a coin and it landed on {result}")
