@@ -642,10 +642,10 @@ class Person:
         self.professional.skills.append(topic)
 
     def remember(self, topic: str, 
-                 say : bool = False) -> None:
-        """use remember for any topic and keep it in _memory.
+                 say: bool = False) -> None:
+        """Use remember for any topic and keep it in _memory.
         Args:
-            topic: The topic being memorised.
+            topic: The topic being memorized.
             say: Needs to be boolean (True or False).
                 
         Raises:
@@ -658,7 +658,7 @@ class Person:
         if not isinstance(topic, str):
             raise TypeError("Topic must be a string.")
 
-        if not isinstance(say, (bool)):
+        if not isinstance(say, bool):
             raise TypeError("Say must be a boolean.")
         
         if say:
@@ -667,7 +667,7 @@ class Person:
         else:
             self._memory = topic
 
-    def recall(self) -> None:
+    def recall(self) -> str | None:
         """return stored memory.
         """
         return self._memory
@@ -675,4 +675,4 @@ class Person:
     def forget(self) -> None:
         """make memory be None.
         """
-        self._memory=None
+        self._memory = None
