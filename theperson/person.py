@@ -94,6 +94,7 @@ class Person:
         self.mood = mood if mood is not None else Mood()
         self.goals = goals if goals is not None else Goals()
         self.inventory = inventory if inventory is not None else Inventory()
+        self._memory: str | None = None
 
     def greet(self,
               target: Person | None = None,
@@ -639,3 +640,39 @@ class Person:
         self.increase_iq(iq_gain)
 
         self.professional.skills.append(topic)
+
+    def remember(self, topic: str, 
+                 say: bool = False) -> None:
+        """Use remember for any topic and keep it in _memory.
+        Args:
+            topic: The topic being memorized.
+            say: Needs to be boolean (True or False).
+                
+        Raises:
+            ValueError: If the arguments have incorrect types.
+            TypeError: If say is not boolean.
+        """
+
+        if topic is None:
+            raise ValueError("No Topic is provided.")
+        if not isinstance(topic, str):
+            raise TypeError("Topic must be a string.")
+
+        if not isinstance(say, bool):
+            raise TypeError("Say must be a boolean.")
+        
+        if say:
+            self._memory = topic
+            self.say(self._memory)
+        else:
+            self._memory = topic
+
+    def recall(self) -> str | None:
+        """return stored memory.
+        """
+        return self._memory
+
+    def forget(self) -> None:
+        """make memory be None.
+        """
+        self._memory = None

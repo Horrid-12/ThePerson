@@ -104,3 +104,9 @@ if __name__ == "__main__":
     ) 
     lionelmessi.introduce(use_nickname=True)
     joe.greet(lionelmessi)
+
+    print(lionelmessi.recall())
+    lionelmessi.remember("Keep training", say=True)
+    print(lionelmessi.recall())
+    lionelmessi.forget()
+    print(lionelmessi.recall())
