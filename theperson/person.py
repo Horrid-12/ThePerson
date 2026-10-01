@@ -687,4 +687,4 @@ class Person:
         outcomes = ("heads", "tails")
         result = random.choice(outcomes)
 
-        print(f"I flip a coin.  It lands on {result}")
+        print(f"I flip a coin. It lands on {result}")
