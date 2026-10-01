@@ -78,3 +78,35 @@ if __name__ == "__main__":
     kraken.say("Hello everyone! Great to be part of something.")
     kraken.mood.set_mood("excited", 0.8)
     kraken.goals.add_goal("Make my first commit")
+
+    kdclll = Person(
+        profile=Profile(
+            name="kdclll",
+            gender="female",
+            hobbies=["Programming", "Reading", "Gaming"],
+
+        ),
+    )
+    kdclll.introduce()
+    kdclll.say("Hello everyone!")
+
+    lionelmessi = Person(
+        profile=Profile(
+            name="Lionel Messi",
+            gender="male",
+            hobbies=["Soccer"],
+            nickname="La Pulga"
+        ),
+        professional=Professional(
+            occupation="Soccer player",
+            skills=["Scoring", "Assisting"],
+        )
+    ) 
+    lionelmessi.introduce(use_nickname=True)
+    joe.greet(lionelmessi)
+
+    print(lionelmessi.recall())
+    lionelmessi.remember("Keep training", say=True)
+    print(lionelmessi.recall())
+    lionelmessi.forget()
+    print(lionelmessi.recall())
