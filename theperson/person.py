@@ -641,13 +641,13 @@ class Person:
 
         self.professional.skills.append(topic)
 
-    def remember(self, topic: str, 
+    def remember(self, topic: str,
                  say: bool = False) -> None:
         """Use remember for any topic and keep it in _memory.
         Args:
             topic: The topic being memorized.
             say: Needs to be boolean (True or False).
-                
+
         Raises:
             ValueError: If the arguments have incorrect types.
             TypeError: If say is not boolean.
@@ -660,7 +660,7 @@ class Person:
 
         if not isinstance(say, bool):
             raise TypeError("Say must be a boolean.")
-        
+
         if say:
             self._memory = topic
             self.say(self._memory)
@@ -676,3 +676,15 @@ class Person:
         """make memory be None.
         """
         self._memory = None
+
+    @staticmethod
+    def flip_coin() -> None:
+        """Flip a coin.
+
+        This method flips a coin and prints the result.
+        """
+
+        outcomes = ("heads", "tails")
+        result = random.choice(outcomes)
+
+        print(f"I flip a coin. It lands on {result}")
